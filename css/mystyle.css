@@ -1,0 +1,22 @@
+
+body{background-color: black;}
+
+/*Tag/element selector*/
+h1 {color: red;}
+h2 {color: blue;}
+p{color: white;}
+
+
+/*ID and CLASS Selector*/
+.atoz{color: blanchedalmond;}
+#abc{color: aquamarine; font-style: italic; font-family: Georgia, 'Times New Roman', Times, serif;}
+#xyz{color: brown;}
+#demo1bg{background-color: darkgrey;} 
+#demo4bg{background-image: url(https://www.imageshine.in/uploads/gallery/White-paper-texture-for-Projects.jpg);background-size: cover; background-repeat: no-repeat;background-attachment: fixed;} 
+
+/*Universal selector ('*') */
+*{color: pink;}
+
+/*Grouping selector*/
+h3,h4 {color: yellow;}
+input, select, option {border-radius: 5px;}
