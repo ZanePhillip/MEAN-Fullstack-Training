@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSCalcu</title>
+</head>
+
+<script>
+    function jscalc()
+    {
+        var fnum = document.daddy.fno.value;
+        fnum = parseInt(fnum);
+        var snum = document.daddy.sno.value;
+        snum = parseInt(snum);
+        var operan = document.daddy.operandum.value;
+
+        if (Number.isInteger(fnum)== true||Number.isInteger(snum)==true)
+        {
+            if (operan == "Multiplication")
+            {
+            var result = fnum * snum;
+            alert(result);
+            }
+            else if (operan == "Division")
+            {
+            var result = fnum / snum;
+            alert(result); 
+            }
+            else if (operan == "Addition")
+            {
+            var result = fnum + snum;
+            alert(result); 
+            }
+            else if (operan == "Subtraction")
+            {
+            var result = fnum - snum;
+            alert(result); 
+            }
+        }
+        else
+        {
+        alert("Invalid data entered");
+        }
+    }
+
+    function fvalidate()
+    {
+    let x = document.forms["daddy"]["fno"].value;
+    let y = document.forms["daddy"]["sno"].value;
+    if ((x == "")||(y==""))
+    {
+        alert("Datafields must be filled out");
+        return false;
+    }
+    else
+    {
+        jscalc();
+    }
+    }
+</script>
+
+<style>
+    .calcmdiv
+    {
+        text-align: center;
+        background-color: grey;
+        border-radius: 25px;
+        height: 80%;
+        width: 20%;
+        margin: auto;
+    }
+    fieldset
+    {
+        border-radius: 25px;
+        width: 25%;
+        margin: auto;
+    }
+</style>
+<body>
+    <div class="calcmdiv">
+        <h1>content</h1>
+        <form name="daddy">
+            <fieldset>
+                Enter first number : 
+                <input type="number" value="enter number" name="fno">
+                <br>
+                Enter second number : 
+                <input type="number" value="enter number" name="sno">
+                <br>
+                Choose operation :
+                <select name="operandum">
+                    <option value="Multiplication">Multiplication</option>
+                    <option value="Division">Division</option>
+                    <option value="Addition">Addition</option>
+                    <option value="Subtraction">Subtraction</option>
+                </select>
+                <br>
+                <input type="submit" value="submit" onclick="fvalidate()">
+                <br>
+            </fieldset>
+        </form>
+    </div>
+    
+</body>
+</html>
