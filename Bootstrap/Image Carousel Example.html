@@ -18,12 +18,42 @@
     height: 720px;
     width: 100%;
     }
+
+    .header_wrapper-outer 
+    {
+    position: sticky;
+    z-index: 10000;
+    height: 40px;
+    top: 0;
+    pointer-events: none;
+    }
+
+    .header_wrapper-inner 
+    {
+    position: sticky;
+    top: 0;
+    height: fit-content;
+    min-height: 40px;
+    pointer-events: all;
+    background-color: red;
+    }
 </style>
 
 
 <body>
+  
+ 
     
 <div class="container" style="text-align: center;">
+  <header class="header_wrapper-outer" style="height: 40px;top: 0px;margin-bottom: 0px;">
+    <div class="header_wrapper-inner">
+      <div>hi</div>
+      <div>hi</div>
+      <div>hi</div>
+    </div>
+
+  </header>
+
     <h2>Carousel Example</h2>  
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
