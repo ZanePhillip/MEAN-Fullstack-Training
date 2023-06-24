@@ -20,22 +20,22 @@
             if (operan == "Multiplication")
             {
             var result = fnum * snum;
-            alert(result);
+            alert("Answer is : "+result);
             }
             else if (operan == "Division")
             {
             var result = fnum / snum;
-            alert(result); 
+            alert("Answer is : "+result); 
             }
             else if (operan == "Addition")
             {
             var result = fnum + snum;
-            alert(result); 
+            alert("Answer is : "+result); 
             }
             else if (operan == "Subtraction")
             {
             var result = fnum - snum;
-            alert(result); 
+            alert("Answer is : "+result); 
             }
         }
         else
@@ -50,7 +50,7 @@
     let y = document.forms["daddy"]["sno"].value;
     if ((x == "")||(y==""))
     {
-        alert("Datafields must be filled out");
+        alert("Datafields must be filled out correctly");
         return false;
     }
     else
@@ -67,7 +67,7 @@
         background-color: grey;
         border-radius: 25px;
         height: 80%;
-        width: 20%;
+        width: 30%;
         margin: auto;
     }
     fieldset
@@ -77,9 +77,10 @@
         margin: auto;
     }
 </style>
+
 <body>
     <div class="calcmdiv">
-        <h1>content</h1>
+        <h1>Simple MDAS Calculator</h1>
         <form name="daddy">
             <fieldset>
                 Enter first number : 
@@ -100,6 +101,7 @@
                 <br>
             </fieldset>
         </form>
+        <br>
     </div>
     
 </body>
