@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+    function fvalidate(value)
+    {
+    let a = document.forms["gform"]["enip"].value;
+    let b = document.forms["gform"]["mtip"].value;
+    let c = document.forms["gform"]["hnip"].value;
+    let d = document.forms["gform"]["sciip"].value;
+    let e = document.forms["gform"]["ssip"].value;
+    if ((a == "")||(b=="")||(c=="")||(d=="")||(e==""))
+    {
+        alert("All datafields must be filled out correctly");
+    }
+    else
+    {
+        jscalc(value);
+    }
+    }
+    function jscalc(value)
+    {
+        var p = parseInt(document.gform.enip.value);
+        var o = parseInt(document.gform.mtip.value);
+        var i = parseInt(document.gform.hnip.value);
+        var n = parseInt(document.gform.sciip.value);
+        var t = parseInt(document.gform.ssip.value);
+        
+        var sum = p+o+i+n+t;
+        var grade = sum.toString();
+        document.gform.gradeout.value=grade;
+        //alert(grade);
+    }
+</script>
+
+<style>
+.calcmdiv
+    {
+        text-align: center;
+        background-color: grey;
+        border-radius: 25px;
+        height: 80%;
+        width: 50%;
+        margin: auto;
+    }
+.gform
+    {
+        text-align: center;        
+    }
+fieldset
+    {
+        border-radius: 25px;
+        width: 25%;
+        margin: auto;
+    }
+h3
+    {
+    color: azure;
+    }
+</style>
+
+<body>
+    <div class="calcmdiv">
+        <form class="gform" name="gform">
+            <h3 style="text-align: center;">Grade</h3>
+            
+            English : <input type="number"name="enip">
+            <br><br>
+            Math :  <input type="number" name="mtip">
+            <br><br>
+            Hindi : <input type="number" name="hnip">
+            <br><br>
+            Science : <input type="number" name="sciip">
+            <br><br>
+            Social Science : <input type="number"name="ssip">
+            <br><br>
+            Total : <input type="text" name="gradeout"> 
+            <br><br>
+            Grade Equiv: <input type="number" name="equiout"> %
+            <br><br>
+            <input type="submit" value="CALCULATE" onclick="fvalidate(value)">
+            <input type="submit" value="RESET">
+
+
+        </form>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="e"></p>
+
+    <script>
+        function emp(fn,ln,age,salary)
+        {
+            this.fn=fn;
+            this.ln=ln;
+            this.age=age;
+            this.salary=salary;
+            console.log(fn);
+            console.log(ln);
+            console.log(age);
+            console.log(salary);
+        }
+        
+        const myemps= new emp("suresh","Kumar",35,50000);
+        
+        emp.prototype.desig="developer";
+
+        document.getElementById('e').innerHTML="My Name is "+ myemps.fn + " Age is "+myemps.age + " Designation is" + myemps.desig
+
+    </script>
+    
+</body>
+</html>

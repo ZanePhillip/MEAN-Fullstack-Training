@@ -20,28 +20,32 @@
             if (operan == "Multiplication")
             {
             var result = fnum * snum;
-            alert("Answer is : "+result);
+            //alert("Answer is : "+result);
+            document.daddy.result.value=result;
             }
             else if (operan == "Division")
             {
             var result = fnum / snum;
-            alert("Answer is : "+result); 
+            //alert("Answer is : "+result); 
+            document.daddy.result.value=result;
             }
             else if (operan == "Addition")
             {
             var result = fnum + snum;
-            alert("Answer is : "+result); 
+            //alert("Answer is : "+result);
+            document.daddy.result.value=result; 
             }
             else if (operan == "Subtraction")
             {
             var result = fnum - snum;
-            alert("Answer is : "+result); 
+            //alert("Answer is : "+result);
+            document.daddy.result.value=result; 
             }
         }
-        else
-        {
-        alert("Invalid data entered");
-        }
+        // else
+        // {
+        // alert("Invalid data entered");
+        // }
     }
 
     function fvalidate()
@@ -76,11 +80,15 @@
         width: 25%;
         margin: auto;
     }
+    h3
+    {
+    color: azure;
+    }
 </style>
 
 <body>
     <div class="calcmdiv">
-        <h1>Simple MDAS Calculator</h1>
+        <h3>MDAS Calculator</h3>
         <form name="daddy">
             <fieldset>
                 Enter first number : 
@@ -97,8 +105,12 @@
                     <option value="Subtraction">Subtraction</option>
                 </select>
                 <br>
-                <input type="submit" value="submit" onclick="fvalidate()">
                 <br>
+                <input style="text-align: center;" type="text" name="result" value="Result will appear here">
+                <br>
+                <br>
+                <input type="submit" value="Compute" onclick="fvalidate()">
+                
             </fieldset>
         </form>
         <br>
